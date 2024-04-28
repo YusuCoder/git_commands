@@ -72,4 +72,22 @@
    git submodule update --init
 ```
 
-### GOOD LUCK ;-)
+### ERRORS and SOLUTIONS
+
+>Its usual to have errors while using git and especially if you're new in git
+>Below i'll provide some error cases that i've faced with
+- error: failed to push some refs to ''github.com/example_git/example_project.git''
+
+
+![error: failed to push some refs to <some github url>](https://github.com/YusuCoder/git_commands/blob/master/imgs/Screen%20Shot%202024-04-28%20at%205.27.42%20PM.png)
+
+- to fix this error there some commands possible:
+- fetch all the changes
+- force push the the `origin with error`
+```
+   git fetch --all
+   git pull origin master
+   git push -f origin master
+```
+
+## GOOD LUCK ;-)
