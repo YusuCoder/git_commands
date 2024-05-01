@@ -71,6 +71,24 @@
 ```
    git submodule update --init
 ```
+### ```Script``` to push Submodules
+Every time you modify the submodule you need to explicitly update your submodules. I'm too lazy to do so, if you're too there is a script to uptade all the submodules with one command:
+ - First create a script file in my case it's ```su.sh```
+ - Then add the following commands to the script.
+ - Then run ```chmod +x su.sh``` to make the file executable.
+ - And BOOM you simply run ```./su.sh``` all the submodules will be updated automatically!
+```
+   #!/bin/bash
+
+# Updating each submodule to the latest commit on its respective branch
+git submodule update --remote --merge
+# Commit changes in the main repository
+git add .
+git commit -m "Auto update script is updating submodules"
+# Commit changes in each submodule and push
+git submodule foreach 'git add . && git commit -m "Auto update script updating the submodules" && git push'
+
+```
 
 ### ERRORS and SOLUTIONS
 
