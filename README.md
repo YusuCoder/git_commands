@@ -90,6 +90,14 @@ git submodule foreach 'git add . && git commit -m "Auto update script updating t
 
 ```
 
+### Reset Changes:
+If you want to cancel all changes you've made to your working directory since the last commit, you can use the git reset --hard command. This command will reset your working directory to match the state of the last commit, discarding all changes you've made. Here's how you can do it:
+
+```
+  git reset --hard HEAD
+```
+This command will reset the HEAD (your current branch) to the last commit, and the --hard option will reset both the working directory and the index (staging area) to match the state of the last commit. Any changes you made since the last commit will be permanently lost
+
 ### ERRORS and SOLUTIONS
 
 >Its usual to have errors while using git and especially if you're new in git
