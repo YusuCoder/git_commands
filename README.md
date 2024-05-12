@@ -62,7 +62,7 @@
 ### Adding ```Submodules``` to your repositoreis:
 >If you want to use some repository which you already have you can use them as a submodule in your current project:
 ```
-   git submodule --add <link from preffered repository>
+   git submodule add <link from preffered repository>
    git init
    git submodule update
 ```
