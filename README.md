@@ -26,7 +26,7 @@
  - Example:
 
 ```
-    git remote --add github https://example.com/my/repository.git
+    git remote add github https://example.com/my/repository.git
     git remote --add --push origin git@vogsphere.42heilbronn.de:vogsphere/intra-uuid-a0266de3-afab-48a3-a0df-e066c48fadb5-5652121-ryusupov
     git remote --add --push origin https://example.com/my/repository.git
 ```
