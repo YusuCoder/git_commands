@@ -116,4 +116,31 @@ This command will reset the HEAD (your current branch) to the last commit, and t
    git push -f origin master
 ```
 
+## MERGING CHANGES FROM THE DIFFERENT BRANCH 
+Lets say you have different branches in one repo called `master` and `main` and you want to megre changes from main to master and you're facing conflicts or want to reject the changes to the specific files or folder:
+- To reject changes to specific file you can run:
+```
+   git checkout --ours <filename>
+```
+### OR
+```
+  git checkout HEAD -- <filename>
+```
+- To reject to specific folder you can run:
+```
+  git checkout HEAD /path/to/your/folder
+```
+Or if you need to reject changes to a specific folder regularly, you might consider using a `.gitattributes` file to mark those files as "unchangeable" during merges:
+- Create or Update .gitattributes: Add a `.gitattributes` file to your repository if you don't have one.
+
+- Add Rules for the Folder: Inside the `.gitattributes` file, add rules for your specific folder:
+```
+  path/to/specific/folder/* merge=ours
+```
+
+- Configure the ours Merge Driver: Ensure that ours is set as the merge strategy:
+```
+git config --global merge.ours.driver true
+```
+
 ## GOOD LUCK ;-)
